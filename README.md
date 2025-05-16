@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/banner.png" alt="Project Banner" width="600"/>
+</p>
+
 # 📊 Procurement Analytics Data Engineering Project
 
 Este proyecto demuestra un pipeline de ingeniería de datos completo para analizar el ciclo de compras (SP, OC, entrega) utilizando herramientas modernas como BigQuery, Terraform, Airflow y Dataform.
