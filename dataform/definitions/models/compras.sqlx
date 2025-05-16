@@ -1,0 +1,27 @@
+config {
+  type: "table"
+}
+
+SELECT
+  eban.BANFN,
+  eban.BNFPO,
+  eban.MATNR,
+  eban.WERKS,
+  eban.BEDAT AS fecha_solicitud,
+  eban.MENGE AS cantidad_solicitada,
+  ekpo.EBELN,
+  ekpo.EBELP,
+  ekpo.NETWR AS valor_oc,
+  eket.EINDT AS fecha_entrega,
+  eket.MENGE AS cantidad_programada,
+  eket.WEMNG AS cantidad_entregada
+FROM
+  `${ref("eban")}` AS eban
+LEFT JOIN
+  `${ref("ekpo")}` AS ekpo
+ON
+  eban.BANFN = ekpo.BANFN AND eban.BNFPO = ekpo.BNFPO
+LEFT JOIN
+  `${ref("eket")}` AS eket
+ON
+  ekpo.EBELN = eket.EBELN AND ekpo.EBELP = eket.EBELP

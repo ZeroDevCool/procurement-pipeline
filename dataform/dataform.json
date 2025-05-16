@@ -1,0 +1,9 @@
+{
+  "warehouse": "bigquery",
+  "defaultSchema": "procurement_analytics",
+  "assertionSchema": "procurement_analytics_assertions",
+  "defaultDatabase": "TU_PROYECTO_ID",
+  "gcloudProjectId": "TU_PROYECTO_ID",
+  "defaultDataset": "procurement_analytics",
+  "assertionDataset": "procurement_analytics_assertions"
+}

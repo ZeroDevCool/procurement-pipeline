@@ -1,0 +1,9 @@
+config {
+  type: "assertion"
+}
+
+SELECT *
+FROM ${ref("compras")}
+WHERE cantidad_solicitada IS NULL
+   OR valor_oc IS NULL
+   OR fecha_entrega IS NULL

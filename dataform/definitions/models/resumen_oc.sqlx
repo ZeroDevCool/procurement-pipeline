@@ -1,0 +1,12 @@
+config {
+  type: "table"
+}
+
+SELECT
+  MATNR,
+  WERKS,
+  COUNT(DISTINCT EBELN) AS total_oc,
+  SUM(valor_oc) AS total_valor_oc,
+  SUM(cantidad_entregada) AS total_entregado
+FROM ${ref("compras")}
+GROUP BY MATNR, WERKS
